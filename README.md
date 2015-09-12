@@ -1,7 +1,7 @@
 # Mobile-testing
 To test the mobile application using APPIUM
 
-<PREREQUISITES>
+## PREREQUISITES
 
 1.Before running automated tests you must install JDK 1.6 (or higher) (not JRE).
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
@@ -41,10 +41,10 @@ i.When the installation completes, restart Eclipse.
 6.Download Appium for Windows zip archive and extract all files in a folder called Appium
 https://bitbucket.org/appium/appium.app/downloads/
 
-TO RUN APPIUM SERVER
+## TO RUN APPIUM SERVER
 1.	Go to the Appium folder you downloaded earlier and run Appium.exe.
 2.	Click on Launch Appium Node Server.
-TO FIND ELEMENTS IN A NATIVE APP
+## TO FIND ELEMENTS IN A NATIVE APP
 1.	Go to SDK folder and open the tools folder.
 2.	Open uiautomatorviewer.On the actual device, open the app to the page you want to automate.
 3.	In UI Automator Viewer, click on Device screenshot (second button).
@@ -54,7 +54,7 @@ TO FIND ELEMENTS IN A NATIVE APP
 7.  Create a project and add the all the jars to the project by 
 Right-click the project-> Build Path->Configure Build Path-> Add External JARs->browse and add the JARs->ok
 Now create a project and a classes as shown below:
-APPIUM APP TEST
+## APPIUM APP TEST
 import java.util.List;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
@@ -72,6 +72,7 @@ import com.sample.UtilityClass;
 public class AppiumAppTest {
 
 	public AppiumDriver<WebElement> appiumDriver=null;
+	
 	private static final By NONOBUTTON=By.xpath("//*[@class='android.widget.Button' and @text='No, no']");
 	private static final By ENBUTTON=By.xpath("//*[@class='android.widget.Button' and @text='EN Button']");
 		
@@ -111,7 +112,7 @@ public class AppiumAppTest {
 	}
 }
 
-UTILITY CLASS
+## UTILITY CLASS
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.AppiumExecutionMethod;
@@ -133,7 +134,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class UtilityClass {
 	
 public static AppiumDriver getDeviceDriver(String OS,String DeviceName)
-{
+{       
 	AppiumDriver appiumDriver=null;
 	if(OS.equalsIgnoreCase("ANDROID"))
 	{
