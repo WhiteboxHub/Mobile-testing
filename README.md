@@ -1,6 +1,8 @@
 # Mobile-testing
 To test the mobile application using APPIUM
-PREREQUISITES
+
+<PREREQUISITES>
+
 1.Before running automated tests you must install JDK 1.6 (or higher) (not JRE).
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 and set the path in environment variables to  location of JDK
