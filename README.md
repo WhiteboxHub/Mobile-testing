@@ -22,7 +22,7 @@ https://nodejs.org/en/
 http://www.eclipse.org/downloads/
 and install the ADT plugin 
 
-To add the ADT plugin to Eclipse:
+####To add the ADT plugin to Eclipse:
 a.Start Eclipse, then select Help > Install New Software.
 b.Click Add, in the top-right corner.
 c.In the Add Repository dialog that appears, enter "ADT Plugin" for the Name and the following URL for the Location:
@@ -44,6 +44,7 @@ https://bitbucket.org/appium/appium.app/downloads/
 ## TO RUN APPIUM SERVER
 1.	Go to the Appium folder you downloaded earlier and run Appium.exe.
 2.	Click on Launch Appium Node Server.
+
 ## TO FIND ELEMENTS IN A NATIVE APP
 1.	Go to SDK folder and open the tools folder.
 2.	Open uiautomatorviewer.On the actual device, open the app to the page you want to automate.
@@ -54,18 +55,20 @@ https://bitbucket.org/appium/appium.app/downloads/
 7.  Create a project and add the all the jars to the project by 
 Right-click the project-> Build Path->Configure Build Path-> Add External JARs->browse and add the JARs->ok
 Now create a project and a classes as shown below:
+
 ## APPIUM APP TEST
-import java.util.List;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import org.apache.log4j.BasicConfigurator;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import com.sample.UtilityClass;
+
+ import java.util.List;
+ import io.appium.java_client.AppiumDriver;
+ import io.appium.java_client.android.AndroidDriver;
+ import org.apache.log4j.BasicConfigurator;
+ import org.junit.After;
+ import org.junit.Before;
+ import org.junit.BeforeClass;
+ import org.junit.Test;
+ import org.openqa.selenium.By;
+ import org.openqa.selenium.WebElement;
+ import com.sample.UtilityClass;
 
 
 
@@ -83,7 +86,8 @@ public class AppiumAppTest {
 		BasicConfigurator.configure();
 	}
 	@Before
-	public void setUp() throws Exception {
+	public void setUp() throws Exception
+	{
 		appiumDriver=UtilityClass.getDeviceDriver("ANDROID","sample3");
 		
 	
@@ -110,55 +114,58 @@ public class AppiumAppTest {
 			((AndroidDriver)appiumDriver).quit();
 		
 	}
-}
+                        }
 
 ## UTILITY CLASS
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.AppiumExecutionMethod;
-import io.appium.java_client.AppiumSetting;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.remote.MobilePlatform;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+ import io.appium.java_client.AppiumDriver;
+ import io.appium.java_client.AppiumExecutionMethod;
+ import io.appium.java_client.AppiumSetting;
+ import io.appium.java_client.android.AndroidDriver;
+ import io.appium.java_client.remote.MobileCapabilityType;
+ import io.appium.java_client.remote.MobilePlatform;
+ import java.net.MalformedURLException;
+ import java.net.URL;
+ import org.openqa.selenium.Platform;
+ import org.openqa.selenium.remote.BrowserType;
+ import org.openqa.selenium.remote.CapabilityType;
+ import org.openqa.selenium.r emote.DesiredCapabilities;
+ import org.openqa.selenium.remote.RemoteWebDriver;
 
 
-public class UtilityClass {
+public class UtilityClass 
+        {
 	
 public static AppiumDriver getDeviceDriver(String OS,String DeviceName)
-{       
+        {     
+        
 	AppiumDriver appiumDriver=null;
 	if(OS.equalsIgnoreCase("ANDROID"))
 	{
-		DesiredCapabilities options=new DesiredCapabilities();
-		//options.setPlatform(Platform.ANDROID);
-		options.setCapability(MobileCapabilityType.PLATFORM_VERSION,"4.4");
-		options.setCapability(MobileCapabilityType.PLATFORM_NAME,MobilePlatform.ANDROID);
-		options.setCapability(MobileCapabilityType.DEVICE_NAME,DeviceName);
-		options.setCapability("appPackage", "io.selendroid.testapp");
-		options.setCapability("appActivity", "io.selendroid.testapp.HomeScreenActivity");
+	DesiredCapabilities options=new DesiredCapabilities();
+	//options.setPlatform(Platform.ANDROID);
+	options.setCapability(MobileCapabilityType.PLATFORM_VERSION,"4.4");
+	options.setCapability(MobileCapabilityType.PLATFORM_NAME,MobilePlatform.ANDROID);
+	options.setCapability(MobileCapabilityType.DEVICE_NAME,DeviceName);
+	options.setCapability("appPackage", "io.selendroid.testapp");
+	options.setCapability("appActivity", "io.selendroid.testapp.HomeScreenActivity");
 		
-		try {
-			appiumDriver=new AndroidDriver(new URL("http://localhost:4723/wd/hub"), options);
+	try
+	{
+		appiumDriver=new AndroidDriver(new URL("http://localhost:4723/wd/hub"), options);
 		
-		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
+	} catch (MalformedURLException e)
+	{
+	// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+	}
 
 	}
-	else{
+	else
+	{
 		
 	}
 	return appiumDriver;
-}
+        }
 
-}
+                                }
