@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Mobile testing</th></tr><tr><td><a href="#t0">Functional Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">362,171</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Mobile testing</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Functional Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.wbl.appium.tests.RegistrationPageTest</td><td><a href="#m0">test2</a></td><td rowspan="1">1442640781236</td><td rowspan="1">60945</td></tr><tr><th colspan="4">Functional Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.wbl.appium.tests.RegistrationPageTest</td><td><a href="#m1">test2</a></td><td rowspan="1">1442640492396</td><td rowspan="1">288837</td></tr></tbody></table><h2>Functional Tests</h2><h3 id="m0">com.wbl.appium.tests.RegistrationPageTest#test2</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>whiteBox1</td><td>Box@g.com1</td><td>whiteboxqa1</td><td>innovapath1</td><td>Java Script</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for com.wbl.appium.utils.WaitClass$1@7748410a
+Build info: version: &apos;2.45.0&apos;, revision: &apos;32a636c&apos;, time: &apos;2015-03-05 22:01:35&apos;
+System info: host: &apos;home&apos;, ip: &apos;192.168.15.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:259)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.wbl.appium.utils.WaitClass.waitFor(WaitClass.java:27)
+	at com.wbl.appium.activities.HomePage.clickOnRegistrationButton(HomePage.java:24)
+	at com.wbl.appium.tests.RegistrationPageTest.test2(RegistrationPageTest.java:17)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 51 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.45.0&apos;, revision: &apos;32a636c&apos;, time: &apos;2015-03-05 22:01:35&apos;
+System info: host: &apos;home&apos;, ip: &apos;192.168.15.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_60&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=io.selendroid.testapp, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, appActivity=io.selendroid.testapp.HomeScreenActivity, desired={appPackage=io.selendroid.testapp, appActivity=io.selendroid.testapp.HomeScreenActivity, platformVersion=4.4, platformName=Android, deviceName=sample1}, platformVersion=4.4.4, webStorageEnabled=false, locationContextEnabled=false, browserName=Android, takesScreenshot=true, javascriptEnabled=true, platformName=Android}]
+Session ID: 35606236-c8d5-468c-9252-917481cba561
+*** Element info: {Using=id, value=io.selendroid.testapp:id/startUserRegistration}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.wbl.appium.utils.WaitClass$1.apply(WaitClass.java:29)
+	at com.wbl.appium.utils.WaitClass$1.apply(WaitClass.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 27 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">com.wbl.appium.tests.RegistrationPageTest#test2</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>whiteBox</td><td>Box@g.com</td><td>whiteboxqa</td><td>innovapath</td><td>Java</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

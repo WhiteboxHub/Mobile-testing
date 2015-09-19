@@ -1,0 +1,14 @@
+
+<suite name="Mobile testing">
+    
+<test name="Functional Tests">
+    
+    <classes>
+           
+            <class name="com.wbl.appium.tests.RegistrationPageTest"/>
+           
+    </classes>
+    
+</test>    
+    
+</suite>
